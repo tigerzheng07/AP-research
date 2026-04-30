@@ -1,0 +1,29 @@
+All experiments were conducted using Google Colab with GPU acceleration enabled. The dataset was first compressed locally into a single file (dataset.zip) to facilitate upload. The internal directory structure of the dataset followed the standard ImageFolder format required by PyTorch:
+
+dataset/
+    train/
+        class_00/
+        class_01/
+        ...
+        class_39/
+    val/
+        class_00/
+        class_01/
+        ...
+        class_39/
+
+Each subfolder corresponds to one of the 40 fine-grained waste categories.
+
+The compressed dataset was uploaded directly through the Colab file interface (Files → Upload) and extracted into the working directory using the built-in unzip command. After extraction, the dataset was located at:
+
+/content/dataset/train
+/content/dataset/val
+
+The directory structure was verified to ensure that all 40 class folders were correctly detected. These paths were then assigned as the training and validation directories within the PyTorch data loading pipeline.
+
+For larger datasets, Google Drive mounting can alternatively be used to improve stability and avoid repeated uploads. In such cases, the dataset directory is accessed via:
+
+/content/drive/MyDrive/dataset
+
+This preparation process ensures compatibility with PyTorch’s ImageFolder class and allows seamless integration with the training pipeline.
+
