@@ -1,3 +1,4 @@
+Please first go to the website mentioned in the paper to download Huawei dataset.
 All experiments were conducted using Google Colab with GPU acceleration enabled. The dataset was first compressed locally into a single file (dataset.zip) to facilitate upload. The internal directory structure of the dataset followed the standard ImageFolder format required by PyTorch:
 
 dataset/
